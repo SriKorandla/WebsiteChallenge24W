@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(255,255,255,0.75),rgba(255,255,255,0.75)), url('https://i0.wp.com/boingboing.net/wp-content/uploads/2018/05/cool-background1.png?fit=1&resize=620%2C4000&ssl=1');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+nav {
+    background-color: rgb(0, 0, 0);;
+    display: flex;
+    flex-direction: row;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center; 
+    flex-wrap: wrap;
+}
+
+.name {
+    color: rgb(255, 255, 255);;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 8px 12px;
+}
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.nav-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 4px;
+    background: rgb(255, 68, 51, 0.4);
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after { /*hover cursor creates line*/
+    content: '';
+    width: 100%;
+    height: 4px;
+    background: rgb(255, 68, 51, 0.4);
+    display: block;
+    margin: auto;
+}
+
+.projects {
+    color: rgb(100, 100, 200);
+    text-decoration: none;
+}
+
+.projects:hover {
+    content: '';
+    width: 100%;
+    height: 4px;
+    color: rgb(255, 68, 51);
+}
+
+.content {
+    color: rgb(255, 255, 255);
+    margin-top: 5%;
+    text-align: center;
+}
+
+.content h1 { 
+    margin-top: 2%;
+    position: relative;
+    font-size: 75px;
+    margin-left:auto;
+    margin-right:auto;
+    padding-bottom: 2%;
+    color: rgb(30, 29, 29);
+}
+
+.content p { 
+    padding-right: 20%;
+    padding-left: 20%;
+    padding-bottom: 1%;
+    font-size: 25px;
+    color: rgb(30, 29, 29)
+}
+
+.scout-image img {
+    max-height: 500px;
+    max-width: 500px;
+    height: auto;
+    width: auto;
+    max-width: 50vw;
+    max-height: 50vh;
+    position: relative;
+    margin: 2% 0% 2%;
+}
+
+.interests p {
+    margin: 20px 0 20px;
+    font-size: 25px;
+    color: rgb(30, 29, 29);
+}
+
+@media only screen and (max-width:680px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+        padding: 2% 6%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav-links {
+        flex: 1;
+        text-align: right;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav-links ul li {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        padding: 8px 12px;
+        text-align: center;
+    }
+}
